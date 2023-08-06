@@ -45,6 +45,7 @@ export class RxjsClickComponent implements OnInit {
     console.log('stop value:', this.isIntervalActive);
 
     this.isIntervalActive = false;
-    this.interval$.next(); // Emit a value to stop the interval
+    // this.interval$.next(); // Emit a value to stop the interval
+    this.interval$.unsubscribe();
   }
 }
